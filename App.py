@@ -24,8 +24,6 @@ if not st.session_state.welcome_shown:
     st.session_state.welcome_shown = True
     st.experimental_rerun()
 
-#cache the data loading function to avoid reloading data on each interaction c/o Ju
-@st.cache_data(ttl=300)
 def load_data(sheet_id):
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
     return pd.read_csv(url)
