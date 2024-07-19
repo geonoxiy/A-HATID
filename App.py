@@ -113,7 +113,7 @@ if line == "LINE A":
 
 
     # calls the plot_map function to create a map for "Line A Routes". It uses coordinates and place labels from line_coords["LINE A"] to plot the route.
-    fig, ax = plot_map("Line A Routes", line_coords["LINE A"]["coords"], line_coords["LINE A"]["place_coords"], line_coords["LINE A"]["place_labels"])
+    fig, ax = plot_map("**Line A Routes**", line_coords["LINE A"]["coords"], line_coords["LINE A"]["place_coords"], line_coords["LINE A"]["place_labels"])
 
     # retrieves the values of the cells from the gsheet, to be used for the conditional statements in highlighting a certain route
     try:
@@ -171,7 +171,7 @@ if line == "LINE B":
     st.write(dfA.iloc[5:8])
 
     # calls the plot_map function to create a map for "Line B Routes". It uses coordinates and place labels from line_coords["LINE B"] to plot the route.    
-    fig, ax = plot_map("Line B Routes", line_coords["LINE B"]["coords"], line_coords["LINE B"]["place_coords"], line_coords["LINE B"]["place_labels"])
+    fig, ax = plot_map("**Line B Routes**", line_coords["LINE B"]["coords"], line_coords["LINE B"]["place_coords"], line_coords["LINE B"]["place_labels"])
 
     # retrieves the values of the cells from the gsheet, to be used for the conditional statements in highlighting a certain route
     try:
