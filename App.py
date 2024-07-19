@@ -101,6 +101,13 @@ line_coords = {
 
 if line == "LINE A":
     st.title("Line A")
+
+    # indication of the last time the code was refreshed
+    local_tz = pytz.timezone('Asia/Manila')
+    local_time = datetime.datetime.now(local_tz)
+    
+    st.write("Last updated:", local_time.strftime("%Y-%m-%d %H:%M:%S"), "  -/  Occasionally refresh the website to get updates!")
+
     st.write("If an E-jeep is marked For Charging, its final stop will be at Gate 1. The E-jeep will continue to make all stops up to Gate 1, as indicated on the map below.")
     st.write(dfA.head(3))
 
@@ -152,6 +159,14 @@ if line == "LINE A":
 
 if line == "LINE B":
     st.title("Line B")
+
+    # indication of the last time the code was refreshed
+    local_tz = pytz.timezone('Asia/Manila')
+    local_time = datetime.datetime.now(local_tz)
+    
+    st.write("Last updated:", local_time.strftime("%Y-%m-%d %H:%M:%S"), "  -/  Occasionally refresh the website to get updates!")
+
+    
     st.write("If an E-jeep is marked For Charging, its final stop will be at Xavier Hall. The E-jeep will continue to make all stops up to Xavier Hall, as indicated on the map below.")
     st.write(dfA.iloc[5:8])
 
@@ -198,8 +213,3 @@ if line == "LINE B":
     if dfA.iloc[7, 3] == "For Charging":
         st.write('B3: This E-jeep is only until Xavier Hall. This will still pass through stops before Xavier Hall.')
 
-# indication of the last time the code was refreshed
-local_tz = pytz.timezone('Asia/Manila')
-local_time = datetime.datetime.now(local_tz)
-
-st.write("Last updated:", local_time.strftime("%Y-%m-%d %H:%M:%S"), "  -/  Occasionally refresh the website to get updates!")
