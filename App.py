@@ -108,7 +108,7 @@ if line == "LINE A":
     
     st.write("_Last updated:_", local_time.strftime("%Y-%m-%d %H:%M:%S"), "  -/  _Occasionally refresh the website to get updates!_")
 
-    st.write("If an E-jeep is marked For Charging, its final stop will be at Gate 1. The E-jeep will continue to make all stops up to Gate 1, as indicated on the map below.")
+    st.write("**If an E-jeep is marked For Charging, its final stop will be at Gate 1. The E-jeep will continue to make all stops up to Gate 1, as indicated on the map below.**")
     st.write(dfA.head(3))
 
 
@@ -153,7 +153,7 @@ if line == "LINE A":
     if dfA.iloc[0, 3] == "For Charging":
         st.write('_A1: This E-jeep is only until Gate 1. This will still pass through stops before Gate 1._')
     if dfA.iloc[1, 3] == "For Charging":
-        st.write('A2: This E-jeep is only until Gate 1. This will still pass through stops before Gate 1.')
+        st.write('_A2: This E-jeep is only until Gate 1. This will still pass through stops before Gate 1._')
     if dfA.iloc[2, 3] == "For Charging":
         st.write('_A3: This E-jeep is only until Gate 1. This will still pass through stops before Gate 1._')
 
@@ -167,7 +167,7 @@ if line == "LINE B":
     st.write("_Last updated:_", local_time.strftime("%Y-%m-%d %H:%M:%S"), "  -/  _Occasionally refresh the website to get updates!_")
 
     
-    st.write("If an E-jeep is marked For Charging, its final stop will be at Xavier Hall. The E-jeep will continue to make all stops up to Xavier Hall, as indicated on the map below.")
+    st.write("**If an E-jeep is marked For Charging, its final stop will be at Xavier Hall. The E-jeep will continue to make all stops up to Xavier Hall, as indicated on the map below.**")
     st.write(dfA.iloc[5:8])
 
     # calls the plot_map function to create a map for "Line B Routes". It uses coordinates and place labels from line_coords["LINE B"] to plot the route.    
@@ -207,9 +207,9 @@ if line == "LINE B":
         st.error(f"Error highlighting route: {e}")
     
     if dfA.iloc[5, 3] == "For Charging":
-        st.write('B1: This E-jeep is only until Xavier Hall. This will still pass through stops before Xavier Hall.')
+        st.write('_B1: This E-jeep is only until Xavier Hall. This will still pass through stops before Xavier Hall._')
     if dfA.iloc[6, 3] == "For Charging":
-        st.write('B2: This E-jeep is only until Xavier Hall. This will still pass through stops before Xavier Hall.')
+        st.write('_B2: This E-jeep is only until Xavier Hall. This will still pass through stops before Xavier Hall._')
     if dfA.iloc[7, 3] == "For Charging":
-        st.write('B3: This E-jeep is only until Xavier Hall. This will still pass through stops before Xavier Hall.')
+        st.write('_B3: This E-jeep is only until Xavier Hall. This will still pass through stops before Xavier Hall._')
 
