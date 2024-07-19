@@ -151,11 +151,11 @@ if line == "LINE A":
         st.error(f"Error highlighting route: {e}")
     
     if dfA.iloc[0, 3] == "For Charging":
-        st.write('A1: This E-jeep is only until Gate 1. This will still pass through stops before Gate 1.')
+        st.write('_A1: This E-jeep is only until Gate 1. This will still pass through stops before Gate 1._')
     if dfA.iloc[1, 3] == "For Charging":
         st.write('A2: This E-jeep is only until Gate 1. This will still pass through stops before Gate 1.')
     if dfA.iloc[2, 3] == "For Charging":
-        st.write('A3: This E-jeep is only until Gate 1. This will still pass through stops before Gate 1.')
+        st.write('_A3: This E-jeep is only until Gate 1. This will still pass through stops before Gate 1._')
 
 if line == "LINE B":
     st.title("Line B")
@@ -164,7 +164,7 @@ if line == "LINE B":
     local_tz = pytz.timezone('Asia/Manila')
     local_time = datetime.datetime.now(local_tz)
     
-    st.write("Last updated:", local_time.strftime("%Y-%m-%d %H:%M:%S"), "  -/  Occasionally refresh the website to get updates!")
+    st.write("_Last updated:_", local_time.strftime("%Y-%m-%d %H:%M:%S"), "  -/  _Occasionally refresh the website to get updates!_")
 
     
     st.write("If an E-jeep is marked For Charging, its final stop will be at Xavier Hall. The E-jeep will continue to make all stops up to Xavier Hall, as indicated on the map below.")
