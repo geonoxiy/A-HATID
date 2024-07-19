@@ -106,7 +106,7 @@ if line == "LINE A":
     local_tz = pytz.timezone('Asia/Manila')
     local_time = datetime.datetime.now(local_tz)
     
-    st.write("_Last updated:_", local_time.strftime("%Y-%m-%d %H:%M:%S"), "_  -/  Occasionally refresh the website to get updates!_")
+    st.write("_Last updated:_", local_time.strftime("%Y-%m-%d %H:%M:%S"), "  -/  _Occasionally refresh the website to get updates!_")
 
     st.write("If an E-jeep is marked For Charging, its final stop will be at Gate 1. The E-jeep will continue to make all stops up to Gate 1, as indicated on the map below.")
     st.write(dfA.head(3))
